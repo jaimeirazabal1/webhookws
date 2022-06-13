@@ -8,7 +8,8 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+    console.log(req.query)
+    res.status(200);
 })
 
 app.post('/', (req, res) => {
