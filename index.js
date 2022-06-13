@@ -21,9 +21,10 @@ app.get('/', (req, res) => {
 
 app.post('/', (req, res) => {
     console.log(req.body)
-    console.log(util.inspect(req.body, {showHidden: false, depth: null, colors: true}))
+    // console.log(util.inspect(req.body, {showHidden: false, depth: null, colors: true}))
     // alternative shortcut
-    console.log(util.inspect(req.body, false, null, true /* enable colors */))
+    // console.log(util.inspect(req.body, false, null, true /* enable colors */))/
+    console.log(JSON.stringify(req.body, null, 4));
     res.send(req.body)
 })
 
