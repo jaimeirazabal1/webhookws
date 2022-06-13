@@ -10,12 +10,8 @@ app.use(bodyParser.json())
 
 app.get('/', (req, res) => {
     console.log(req.query)
+    console.log(req.query.entry[0]?.changes);
 
-    console.log(util.inspect(req.query, {showHidden: false, depth: null, colors: true}))
-
-    // alternative shortcut
-    console.log(util.inspect(req.query, false, null, true /* enable colors */))
-    
     res.status(200).send(req.query['hub.challenge']);
 })
 
