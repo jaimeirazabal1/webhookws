@@ -9,7 +9,7 @@ app.use(bodyParser.json())
 
 app.get('/', (req, res) => {
     console.log(req.query)
-    res.status(200);
+    res.status(200).send("ok");
 })
 
 app.post('/', (req, res) => {
